@@ -1,4 +1,3 @@
-import { Col, Row, Statistic } from "antd";
 import CountUp from "react-countup";
 import hero1 from "../../assets/images/hero_img1.png";
 import hero2 from "../../assets/images/hero_img2.png";
@@ -7,8 +6,6 @@ import hero4 from "../../assets/images/hero_img4.png";
 import hero5 from "../../assets/images/hero-img5.png";
 import hero6 from "../../assets/images/hero_img6.png";
 import hero7 from "../../assets/images/hero_img7.png";
-
-const formatter = (value) => <CountUp end={value} separator=',' />;
 
 const HeroSection = () => {
     return (
@@ -38,39 +35,68 @@ const HeroSection = () => {
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Nunc vulputate libero et velit.
                         </p>
-                        <div>
-                            <button className='mt-6 bg-[#6C5DD3] text-white px-6 py-2 rounded-full font-semibold hover:opacity-90 transition'>
+                        <div className='flex gap-x-4'>
+                            <button className='bg-[#6C5DD3] text-white px-6 py-2 rounded-full font-semibold hover:opacity-90 transition'>
                                 Explore Now
                             </button>
                             <button className='bg-[#493E52] text-white px-6 py-2 rounded-full'>
                                 Create
                             </button>
                         </div>
-                        <div>
-                            <Row gutter={16}>
-                                <Col span={12}>
-                                    <Statistic
-                                        title='Active Users'
-                                        value={112893}
-                                        formatter={formatter}
+                        <div className='flex justify-between items-center mt-6 text-white font-bold'>
+                            <div className='text-center'>
+                                <div
+                                    style={{
+                                        fontSize: "32px",
+                                        color: "#ffffff",
+                                    }}>
+                                    <CountUp
+                                        end={100}
+                                        duration={2}
+                                        suffix='+'
                                     />
-                                </Col>
-                                <Col span={12}>
-                                    <Statistic
-                                        title='Account Balance (CNY)'
-                                        value={112893}
-                                        precision={2}
-                                        formatter={formatter}
+                                </div>
+                                <div className='text-gray-400 font-medium text-lg mt-1'>
+                                    Brands
+                                </div>
+                            </div>
+
+                            <div className='text-center'>
+                                <div
+                                    style={{
+                                        fontSize: "32px",
+                                        color: "#ffffff",
+                                    }}>
+                                    <CountUp
+                                        end={20}
+                                        duration={2.5}
+                                        suffix='k+'
                                     />
-                                </Col>
-                            </Row>
+                                </div>
+                                <div className='text-gray-400 font-medium text-lg mt-1'>
+                                    Fashion Designer
+                                </div>
+                            </div>
+
+                            <div className='text-center'>
+                                <div
+                                    style={{
+                                        fontSize: "32px",
+                                        color: "#ffffff",
+                                    }}>
+                                    <CountUp end={60} duration={2} suffix='+' />
+                                </div>
+                                <div className='text-gray-400 font-medium text-lg mt-1'>
+                                    Fashion Shows
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div className='hero-image flex justify-center gap-8'>
                         {/* 1-ustun */}
                         <div className='flex flex-col'>
-                            <img src={hero1} alt='Hero'  className="mb-4"/>
+                            <img src={hero1} alt='Hero' className='mb-4' />
                             <img src={hero2} alt='Hero' />
                             <img src={hero3} alt='Hero' />
                         </div>

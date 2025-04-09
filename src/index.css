@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 
 html {
     height: 100%;
@@ -15,7 +17,7 @@ body {
     margin: 0;
     height: 100%;
     flex-direction: column;
-    font-family: "Satoshi";
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
     background: linear-gradient(to right, #874739, #181e41);
