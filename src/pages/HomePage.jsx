@@ -1,4 +1,4 @@
-import { Brends, Hero, AboutUs, Collection, NewTrending, Creators } from "../components/sections";
+import { Brends, Hero, AboutUs, Collection, NewTrending, Creators, UpcomingBrands } from "../components/sections";
 
 
 
@@ -11,6 +11,7 @@ const HomePage = () => {
       <Collection/>
       <NewTrending/>
       <Creators/>
+      <UpcomingBrands/>
     </>
   )
 }

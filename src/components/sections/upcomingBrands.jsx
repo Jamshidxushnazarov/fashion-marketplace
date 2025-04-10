@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { card as initialCardData } from "../../utils/creatorsData"; // data faylingizni import qilasiz
+import { card as initialCardData } from "../../utils/brendsData"; // data faylingizni import qilasiz
 import { BsPatchCheckFill } from "react-icons/bs";
 
-const Creators = () => {
+
+const UpcomingBrands = () => {
     const [cards, setCards] = useState(initialCardData);
 
     const handleFollowToggle = (id) => {
@@ -17,7 +18,7 @@ const Creators = () => {
             <div className='container'>
                 <div>
                     <h2 className='text-white text-center text-3xl font-bold mt-[120px]'>
-                        Upcoming Creators
+                        Upcoming Brands
                     </h2>
                     <p className='text-[#888888]  text-center w-[323px] mt-[10px] mx-auto'>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -51,7 +52,7 @@ const Creators = () => {
                                     <img
                                         src={avatar}
                                         alt='avatar'
-                                        className='w-16 h-16 rounded-full border-4 border-white -mt-12 object-cover'
+                                        className='w-16 h-16 rounded-full  -mt-12 object-cover'
                                     />
                                     <h2 className='mt-2 font-semibold text-lg flex items-center gap-1'>
                                         {name}
@@ -85,4 +86,4 @@ const Creators = () => {
     );
 };
 
-export default Creators;
+export default UpcomingBrands;
