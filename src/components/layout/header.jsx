@@ -5,6 +5,7 @@ import LogoSite from "../../assets/images/Logo.svg";
 import UserSute from "../../assets/images/User.svg";
 import Notification from "../../assets/images/Notification.svg";
 import Message from "../../assets/images/Message.svg";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     const [isMoreOpen, setIsMoreOpen] = useState(false);
@@ -104,12 +105,12 @@ export default function Header() {
                     </button>
                     {isUserOpen && (
                         <div className='absolute right-0 mt-2 bg-white text-black rounded-lg shadow-lg py-2 z-50 w-32'>
-                            <button className='block w-full text-left px-4 py-2 hover:bg-gray-100 text-sm'>
+                            <Link to="/login" className='block w-full text-left px-4 py-2 hover:bg-gray-100 text-sm'>
                                 Sign In
-                            </button>
-                            <button className='block w-full text-left px-4 py-2 hover:bg-gray-100 text-sm'>
+                            </Link>
+                            <Link to="/register" className='block w-full text-left px-4 py-2 hover:bg-gray-100 text-sm'>
                                 Sign Up
-                            </button>
+                            </Link>
                         </div>
                     )}
                 </div>
