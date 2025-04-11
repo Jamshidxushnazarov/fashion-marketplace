@@ -1,9 +1,9 @@
-import creator_img1 from "../assets/images/creators_img1.png";
-import creator_img2 from "../assets/images/creators_img2.png";
-import creator_img3 from "../assets/images/creators_img3.png";
+import creator_img1 from "../assets/images/Creators_img1.png";
+import creator_img2 from "../assets/images/Creators_img2.png";
+import creator_img3 from "../assets/images/Creators_img3.png";
 import cretaor_icon1 from "../assets/images/Creators_icon1.svg";
-import cretaor_icon2 from "../assets/images/creators_icon2.svg";
-import cretaor_icon3 from "../assets/images/creators_icon3.svg";
+import cretaor_icon2 from "../assets/images/Creators_icon2.svg";
+import cretaor_icon3 from "../assets/images/Creators_icon3.svg";
 
 
 
