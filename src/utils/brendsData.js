@@ -2,7 +2,7 @@ import brands_img1 from "../assets/images/Brands_img1.png"
 import brands_img2 from "../assets/images/Brands_img2.png"
 import brands_img3 from "../assets/images/Brands_img3.png";
 import brands_icon1 from "../assets/images/Brands_icon1.svg";
-import brands_icon2 from "../assets/images/Brands_icon2.svg";
+import brands_icon2 from "../assets/images/brands_icon2.svg";
 import brands_icon3 from "../assets/images/Brands_icon3.svg";
 
 
