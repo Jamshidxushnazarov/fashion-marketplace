@@ -1,18 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { ReactNode } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { ConfigProvider } from "antd";
 
-const ProviderConfig = ({ children }) => {
+// Define the type for the props
+interface ProviderConfigProps {
+    children: ReactNode;
+}
+
+const ProviderConfig: React.FC<ProviderConfigProps> = ({ children }) => {
     return (
         <BrowserRouter>
             <ConfigProvider>{children}</ConfigProvider>
         </BrowserRouter>
     );
-};
-
-ProviderConfig.propTypes = {
-    children: PropTypes.node.isRequired,
 };
 
 export default ProviderConfig;

@@ -5,11 +5,16 @@ import { Form, Input, Button } from "antd";
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
-    const [loading, setLoading] = useState(false);
+interface LoginFormValues {
+    email: string;
+    password: string;
+}
+
+const Login: React.FC = () => {
+    const [loading, setLoading] = useState<boolean>(false);
     const navigate = useNavigate();
 
-    const onFinish = async (values) => {
+    const onFinish = async (values: LoginFormValues): Promise<void> => {
         const { email, password } = values;
         setLoading(true);
 
@@ -17,7 +22,7 @@ const Login = () => {
             await signInWithEmailAndPassword(auth, email, password);
             toast.success("Tizimga muvaffaqiyatli kirdingiz!");
             navigate("/");
-        } catch (error) {
+        } catch (error: any) {
             toast.error(error.message);
         } finally {
             setLoading(false);
@@ -59,9 +64,7 @@ const Login = () => {
                             </span>
                         }
                         name='password'
-                        rules={[
-                            { required: true, message: "Parolni kiriting!" },
-                        ]}>
+                        rules={[{ required: true, message: "Parolni kiriting!" }]}>
                         <Input.Password
                             placeholder='Parol'
                             className='h-10 px-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500'

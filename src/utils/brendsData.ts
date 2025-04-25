@@ -1,13 +1,24 @@
-import brands_img1 from "../assets/images/Brands_img1.png"
-import brands_img2 from "../assets/images/Brands_img2.png"
+import brands_img1 from "../assets/images/Brands_img1.png";
+import brands_img2 from "../assets/images/Brands_img2.png";
 import brands_img3 from "../assets/images/Brands_img3.png";
 import brands_icon1 from "../assets/images/Brands_icon1.svg";
 import brands_icon2 from "../assets/images/brands_icon2.svg";
 import brands_icon3 from "../assets/images/Brands_icon3.svg";
 
+// Define the type for the card data
+ export interface Card {
+    id: number;
+    name: string;
+    username: string;
+    isVerified: boolean;
+    bio: string;
+    avatar: string;
+    coverImage: string;
+    isFollowed: boolean;
+}
 
-
-export const card = [
+// Create the card array with type annotation
+export const card: Card[] = [
     {
         id: 1,
         name: "John Wick",
@@ -19,7 +30,7 @@ export const card = [
         isFollowed: true,
     },
     {
-        id: 1,
+        id: 2, // Fix duplicate id
         name: "John Wick",
         username: "johnwick",
         isVerified: true,
@@ -29,7 +40,7 @@ export const card = [
         isFollowed: true,
     },
     {
-        id: 1,
+        id: 3, // Fix duplicate id
         name: "John Wick",
         username: "johnwick",
         isVerified: true,

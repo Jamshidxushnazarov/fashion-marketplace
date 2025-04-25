@@ -5,11 +5,20 @@ import cretaor_icon1 from "../assets/images/Creators_icon1.svg";
 import cretaor_icon2 from "../assets/images/Creators_icon2.svg";
 import cretaor_icon3 from "../assets/images/Creators_icon3.svg";
 
+// Define the type for the creators data
+export interface CreatorCard {
+    id: number;
+    name: string;
+    username: string;
+    isVerified: boolean;
+    bio: string;
+    avatar: string;
+    coverImage: string;
+    isFollowed: boolean;
+}
 
-
-
-
-export const card = [
+// Create the creator cards array with type annotation
+export const card: CreatorCard[] = [
     {
         id: 1,
         name: "John Wick",
@@ -21,7 +30,7 @@ export const card = [
         isFollowed: true,
     },
     {
-        id: 1,
+        id: 2, // Make sure IDs are unique
         name: "John Wick",
         username: "johnwick",
         isVerified: true,
@@ -31,7 +40,7 @@ export const card = [
         isFollowed: true,
     },
     {
-        id: 1,
+        id: 3, // Make sure IDs are unique
         name: "John Wick",
         username: "johnwick",
         isVerified: true,

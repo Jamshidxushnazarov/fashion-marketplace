@@ -1,4 +1,4 @@
-import collection1 from "../assets/images/AllCollection_img1.png"
+import collection1 from "../assets/images/AllCollection_img1.png";
 import collection2 from "../assets/images/AllCollection_img2.png";
 import collection3 from "../assets/images/AllCollection_img3.png";
 import collection4 from "../assets/images/AllCollection_img4.png";
@@ -8,12 +8,24 @@ import collection7 from "../assets/images/AllCollection_img7.png";
 import collection8 from "../assets/images/AllCollection_img8.png";
 import collection9 from "../assets/images/AllCollection_img9.png";
 
-export const cards = [
+// Define the type for the cards data
+export interface Card {
+    id: number; // Use string or number for id
+    author: string;
+    title: string;
+    image: string;
+    currentBid: string;
+    liked: boolean;
+    buttonText: string;
+}
+
+// Create the cards array with type annotation
+export const cards: Card[] = [
     {
         id: 1,
         author: "@Johny",
         title: "Lorem Ipsum",
-        image:  collection1 ,
+        image: collection1,
         currentBid: "0.005 ETH",
         liked: false,
         buttonText: "Buy Now",
@@ -22,7 +34,7 @@ export const cards = [
         id: 2,
         author: "@Johny",
         title: "Lorem Ipsum",
-        image:  collection2 ,
+        image: collection2,
         currentBid: "0.005 ETH",
         liked: false,
         buttonText: "Buy Now",
@@ -31,7 +43,7 @@ export const cards = [
         id: 3,
         author: "@Johny",
         title: "Lorem Ipsum",
-        image:  collection3 ,
+        image: collection3,
         currentBid: "0.005 ETH",
         liked: false,
         buttonText: "Buy Now",
@@ -40,7 +52,7 @@ export const cards = [
         id: 4,
         author: "@Johny",
         title: "Lorem Ipsum",
-        image:  collection4 ,
+        image: collection4,
         currentBid: "0.005 ETH",
         liked: false,
         buttonText: "Buy Now",
@@ -49,7 +61,7 @@ export const cards = [
         id: 5,
         author: "@Johny",
         title: "Lorem Ipsum",
-        image: collection5 ,
+        image: collection5,
         currentBid: "0.005 ETH",
         liked: false,
         buttonText: "Buy Now",
@@ -58,7 +70,7 @@ export const cards = [
         id: 6,
         author: "@Johny",
         title: "Lorem Ipsum",
-        image:  collection6 ,
+        image: collection6,
         currentBid: "0.005 ETH",
         liked: false,
         buttonText: "Buy Now",
@@ -67,7 +79,7 @@ export const cards = [
         id: 7,
         author: "@Johny",
         title: "Lorem Ipsum",
-        image:  collection7 ,
+        image: collection7,
         currentBid: "0.005 ETH",
         liked: false,
         buttonText: "Buy Now",
@@ -76,7 +88,7 @@ export const cards = [
         id: 8,
         author: "@Johny",
         title: "Lorem Ipsum",
-        image:  collection8 ,
+        image: collection8,
         currentBid: "0.005 ETH",
         liked: false,
         buttonText: "Buy Now",
@@ -85,7 +97,7 @@ export const cards = [
         id: 9,
         author: "@Johny",
         title: "Lorem Ipsum",
-        image:  collection9 ,
+        image: collection9,
         currentBid: "0.005 ETH",
         liked: false,
         buttonText: "Buy Now",

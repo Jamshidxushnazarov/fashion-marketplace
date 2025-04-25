@@ -1,11 +1,20 @@
-import trending1 from "../assets/images/Trending_img1.png"
+import trending1 from "../assets/images/Trending_img1.png";
 import trending2 from "../assets/images/Trending_img2.png";
 import trending3 from "../assets/images/Trending_img3.png";
 
+// Define the type for the trending data
+ export interface TrendingCard {
+    id: number;
+    author: string;
+    title: string;
+    image: string;
+    currentBid: string;
+    liked: boolean;
+    buttonText: string;
+}
 
-
-
-export const cards = [
+// Create the trending cards array with type annotation
+export const cards: TrendingCard[] = [
     {
         id: 1,
         author: "@Johny",

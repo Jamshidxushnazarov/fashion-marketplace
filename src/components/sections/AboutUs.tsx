@@ -1,6 +1,7 @@
-import aboutUs from "../../assets/images/AboutUs.png"
+import React from "react";
+import aboutUs from "../../assets/images/AboutUs.png";
 
-const AboutUs = () => {
+const AboutUs: React.FC = () => {
     return (
         <>
             <div className='max-w-6xl mx-auto'>
@@ -8,7 +9,7 @@ const AboutUs = () => {
                     <h2 className='text-white text-center text-3xl font-bold mt-[83px]'>
                         About Us
                     </h2>
-                    <p className='text-[#888888]  text-center w-[323px] mt-[10px] mx-auto'>
+                    <p className='text-[#888888] text-center w-[323px] mt-[10px] mx-auto'>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <div className='flex mt-[91px] justify-between'>

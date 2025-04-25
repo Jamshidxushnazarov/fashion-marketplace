@@ -6,11 +6,18 @@ import { Form, Input, Button } from "antd";
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
 
-const Register = () => {
-    const navigate = useNavigate();
-    const [loading, setLoading] = useState(false);
+interface RegisterFormValues {
+    firstname: string;
+    lastname: string;
+    email: string;
+    password: string;
+}
 
-    const onFinish = async (values) => {
+const Register: React.FC = () => {
+    const navigate = useNavigate();
+    const [loading, setLoading] = useState<boolean>(false);
+
+    const onFinish = async (values: RegisterFormValues): Promise<void> => {
         const { firstname, lastname, email, password } = values;
         setLoading(true);
 
@@ -30,7 +37,7 @@ const Register = () => {
 
             toast.success("Ro‘yxatdan muvaffaqiyatli o‘tdingiz!");
             navigate("/login");
-        } catch (error) {
+        } catch (error: any) {
             toast.error(error.message);
         } finally {
             setLoading(false);
@@ -52,12 +59,7 @@ const Register = () => {
                             </span>
                         }
                         name='firstname'
-                        rules={[
-                            {
-                                required: true,
-                                message: "Iltimos, ismingizni kiriting!",
-                            },
-                        ]}>
+                        rules={[{ required: true, message: "Iltimos, ismingizni kiriting!" }]}>
                         <Input
                             placeholder='Ismingiz'
                             className='h-10 px-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500'
@@ -71,12 +73,7 @@ const Register = () => {
                             </span>
                         }
                         name='lastname'
-                        rules={[
-                            {
-                                required: true,
-                                message: "Iltimos, familiyangizni kiriting!",
-                            },
-                        ]}>
+                        rules={[{ required: true, message: "Iltimos, familiyangizni kiriting!" }]}>
                         <Input
                             placeholder='Familiyangiz'
                             className='h-10 px-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500'
@@ -110,9 +107,7 @@ const Register = () => {
                             </span>
                         }
                         name='password'
-                        rules={[
-                            { required: true, message: "Parolni kiriting!" },
-                        ]}>
+                        rules={[{ required: true, message: "Parolni kiriting!" }]}>
                         <Input.Password
                             placeholder='Parol'
                             className='h-10 px-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500'

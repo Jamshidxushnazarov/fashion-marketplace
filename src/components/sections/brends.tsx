@@ -1,8 +1,9 @@
-import brends1 from '../../assets/images/Adidas.svg'
-import brends2 from '../../assets/images/puma.svg'
-import brends3 from '../../assets/images/Lacoste.svg'
+import React from 'react';
+import brends1 from '../../assets/images/Adidas.svg';
+import brends2 from '../../assets/images/puma.svg';
+import brends3 from '../../assets/images/Lacoste.svg';
 
-const Brends = () => {
+const Brends: React.FC = () => {
   return (
       <div className='max-w-5xl mx-auto'>
           <div className='flex justify-between pt-[105px]'>
@@ -14,4 +15,4 @@ const Brends = () => {
   );
 }
 
-export default Brends
+export default Brends;

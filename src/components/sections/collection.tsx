@@ -1,20 +1,19 @@
+import { useState } from "react";
+import { cards, Card  } from "../../utils/collectionData";
 import money from "../../assets/images/Allcollection_money.svg";
 import nft from "../../assets/images/Allcollection_NFT.svg";
 import transit from "../../assets/images/Allcollection_transit.svg";
-import { cards } from "../../utils/collectionData";
-import { useState } from "react";
 
+const Collection: React.FC = () => {
+    const [cardStates, setCardStates] = useState<Card[]>(cards);
 
-
-const Collection = () => {
-    const [cardStates, setCardStates] = useState(cards);
-
-    const toggleLike = (id) => {
+    const toggleLike = (id: string) => {
         const updatedCards = cardStates.map((card) =>
-            card.id === id ? { ...card, liked: !card.liked } : card
+            card.id === Number(id) ? { ...card, liked: !card.liked } : card
         );
         setCardStates(updatedCards);
     };
+
     return (
         <>
             <div className='container'>
@@ -22,7 +21,7 @@ const Collection = () => {
                     <h2 className='text-white text-center text-3xl font-bold mt-[120px]'>
                         All Collection
                     </h2>
-                    <p className='text-[#888888]  text-center w-[323px] mt-[10px] mx-auto'>
+                    <p className='text-[#888888] text-center w-[323px] mt-[10px] mx-auto'>
                         Worlds First Layer 2 Fashion Marketplace
                     </p>
                     <div className='flex mt-[75px] max-w-[941px] justify-between mx-auto '>
@@ -90,7 +89,7 @@ const Collection = () => {
                                 <div className='mt-4 flex justify-between items-center'>
                                     <button
                                         className='text-xl'
-                                        onClick={() => toggleLike(card.id)}>
+                                        onClick={() => toggleLike(card.id.toString())}>
                                         {card.liked ? "❤️" : "🤍"}
                                     </button>
                                     <button className=' bg-[#6C5DD3] text-white px-4 py-2 rounded-lg font-semibold w-[250px]'>

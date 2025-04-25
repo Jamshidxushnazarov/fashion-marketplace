@@ -1,6 +1,5 @@
-// Header.jsx
 import { useState, useRef, useEffect } from "react";
-import { FiSearch, FiBell, FiMessageSquare } from "react-icons/fi";
+import { FiSearch } from "react-icons/fi";
 import LogoSite from "../../assets/images/Logo.svg";
 import UserSute from "../../assets/images/User.svg";
 import Notification from "../../assets/images/Notification.svg";
@@ -8,19 +7,19 @@ import Message from "../../assets/images/Message.svg";
 import { Link } from "react-router-dom";
 
 export default function Header() {
-    const [isMoreOpen, setIsMoreOpen] = useState(false);
-    const [isUserOpen, setIsUserOpen] = useState(false);
+    const [isMoreOpen, setIsMoreOpen] = useState<boolean>(false);
+    const [isUserOpen, setIsUserOpen] = useState<boolean>(false);
 
     // dropdown outside click close
-    const moreRef = useRef();
-    const userRef = useRef();
+    const moreRef = useRef<HTMLDivElement | null>(null);
+    const userRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        const handler = (e) => {
-            if (moreRef.current && !moreRef.current.contains(e.target)) {
+        const handler = (e: MouseEvent) => {
+            if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
                 setIsMoreOpen(false);
             }
-            if (userRef.current && !userRef.current.contains(e.target)) {
+            if (userRef.current && !userRef.current.contains(e.target as Node)) {
                 setIsUserOpen(false);
             }
         };
@@ -29,7 +28,7 @@ export default function Header() {
     }, []);
 
     return (
-        <header className='max-w-[1365px] mx-auto px-6 py-3  text-white flex items-center justify-between '>
+        <header className='max-w-[1365px] mx-auto px-6 py-3 text-white flex items-center justify-between'>
             {/* Left - Logo */}
             <img src={LogoSite} alt='logo' />
 
